@@ -1,6 +1,6 @@
 # Go Care Bears Game
 
-A game by Team Go Care Bears for care jam 2021
+A game by Team Go Care Bears for Care Jam 2021
 
 ## Installation
 
