@@ -5,6 +5,10 @@ A game by Team Go Care Bears for care jam 2021
 ## Installation
 
 Once one is cloned into the repository, update Godot and compile using [Scons](https://github.com/SCons/scons).
+(Scons may also be installed via pip)
+```bash
+python -m pip intall scons
+```
 
 ```bash
 git clone https://github.com/LilithDaly/Go-Care-Bears-Game.git
