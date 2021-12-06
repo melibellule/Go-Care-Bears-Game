@@ -1,0 +1,66 @@
+{
+    "booleans": {
+
+    },
+
+    "Character1": {
+        "default image": "res:/path",
+        "images": {
+            "annoyed": "res:/path",
+            "content": "res:/path",
+            "worried": "res:/path"
+        }
+    },
+
+    "Character2": {
+        "default image": "res:/path",
+        "images": {
+            "annoyed": "res:/path",
+            "content": "res:/path",
+            "worried": "res:/path"
+        }
+    },
+
+    "Conversation": [
+        {
+            "character":"Character1",
+            "dialogue":"hello"
+        },
+        {
+            "character":"Character1",
+            "image":"worried",
+            "dialogue":"~hello~"
+        },
+        {
+            "character":"Character1",
+            "dialogue":"hello",
+            "choice": [
+                {
+                    "text": "choice 1 >>",
+                    "path": "Conversation2"
+                },
+                {
+                    "text": "choice 2 >>",
+                    "path": "Conversation3",
+                    "boolean": {
+                        "Path2": "True"
+                    }
+                }
+            ]
+        }
+    ],
+
+    "Conversation2": [
+        {
+            "character":"Character1",
+            "dialogue":"hello"
+        }
+    ],
+
+    "Conversation3": [
+        {
+            "character":"Character2",
+            "dialogue":"hello"
+        }
+    ]
+}
