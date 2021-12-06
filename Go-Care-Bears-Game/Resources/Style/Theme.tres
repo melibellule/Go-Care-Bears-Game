@@ -1,14 +1,20 @@
-[gd_resource type="Theme" load_steps=10 format=2]
+[gd_resource type="Theme" load_steps=16 format=2]
 
 [ext_resource path="res://Resources/Style/OpenDyslexic42.tres" type="DynamicFont" id=1]
 [ext_resource path="res://Resources/Style/OpenDyslexic36.tres" type="DynamicFont" id=2]
 [ext_resource path="res://Resources/Style/Button/ButtonDisabled.tres" type="StyleBox" id=3]
 [ext_resource path="res://Resources/Style/Button/ButtonPressed.tres" type="StyleBox" id=4]
-[ext_resource path="res://Resources/Style/Panel/Panel.tres" type="StyleBox" id=5]
+[ext_resource path="res://Resources/Style/Panel/DialoguePanel.tres" type="StyleBox" id=5]
 [ext_resource path="res://Resources/Style/Label/Label.tres" type="StyleBox" id=6]
 [ext_resource path="res://Resources/Style/Button/ButtonHover.tres" type="StyleBox" id=7]
 [ext_resource path="res://Resources/Style/Button/ButtonFocus.tres" type="StyleBox" id=8]
 [ext_resource path="res://Resources/Style/Button/ButtonFlat.tres" type="StyleBox" id=9]
+[ext_resource path="res://Resources/Textures/ChoiceArrows.png" type="Texture" id=10]
+[ext_resource path="res://Resources/Style/Misc/HSeperator.tres" type="StyleBox" id=11]
+[ext_resource path="res://Resources/Textures/CheckOffEnabled.png" type="Texture" id=12]
+[ext_resource path="res://Resources/Textures/CheckOnDisabled.png" type="Texture" id=13]
+[ext_resource path="res://Resources/Textures/CheckOffDisabled.png" type="Texture" id=14]
+[ext_resource path="res://Resources/Textures/CheckOnEnabled.png" type="Texture" id=15]
 
 [resource]
 default_font = ExtResource( 2 )
@@ -22,8 +28,17 @@ Button/styles/focus = ExtResource( 8 )
 Button/styles/hover = ExtResource( 7 )
 Button/styles/normal = ExtResource( 9 )
 Button/styles/pressed = ExtResource( 4 )
+CheckButton/constants/hseparation = 12
+CheckButton/icons/off = ExtResource( 12 )
+CheckButton/icons/off_disabled = ExtResource( 14 )
+CheckButton/icons/on = ExtResource( 15 )
+CheckButton/icons/on_disabled = ExtResource( 13 )
 HBoxContainer/constants/separation = 100
+HSeparator/constants/separation = 75
+HSeparator/styles/separator = ExtResource( 11 )
 Label/constants/line_spacing = 9
 Label/fonts/font = ExtResource( 1 )
 Label/styles/normal = ExtResource( 6 )
+OptionButton/icons/arrow = ExtResource( 10 )
 Panel/styles/Panel = ExtResource( 5 )
+VBoxContainer/constants/separation = 35

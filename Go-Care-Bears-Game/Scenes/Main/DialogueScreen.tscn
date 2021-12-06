@@ -1,0 +1,93 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Resources/Style/Button/GUIButtonGroup.tres" type="ButtonGroup" id=1]
+[ext_resource path="res://Scenes/Main/GameInterface.gd" type="Script" id=2]
+[ext_resource path="res://Resources/Style/Button/ButtonFocus.gd" type="Script" id=3]
+[ext_resource path="res://Resources/Style/Panel/DialoguePanel.tres" type="StyleBox" id=4]
+[ext_resource path="res://Resources/Textures/uad2z5q5.bmp" type="Texture" id=5]
+[ext_resource path="res://Resources/Style/Theme.tres" type="Theme" id=6]
+
+[node name="DialogueScreen" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CharacterImage" type="TextureRect" parent="."]
+anchor_left = 0.84
+anchor_top = 0.7
+anchor_right = 0.84
+anchor_bottom = 0.7
+margin_left = -534.0
+margin_top = -701.0
+texture = ExtResource( 5 )
+stretch_mode = 5
+flip_h = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Dialogue" type="Panel" parent="."]
+anchor_left = 0.15
+anchor_top = 0.65
+anchor_right = 0.85
+anchor_bottom = 0.94
+theme = ExtResource( 6 )
+custom_styles/panel = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Text" type="Label" parent="Dialogue"]
+anchor_right = 1.0
+anchor_bottom = 0.725
+theme = ExtResource( 6 )
+text = "This is a test and basically I am just writing whatever comes to mind so that I can see how this box responds to text. Lorem Ipsum Dolor Sit Amet..."
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Center" type="CenterContainer" parent="Dialogue"]
+anchor_top = 0.725
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GameInterface" type="HBoxContainer" parent="Dialogue/Center"]
+margin_left = 317.0
+margin_top = 17.0
+margin_right = 1027.0
+margin_bottom = 68.0
+theme = ExtResource( 6 )
+script = ExtResource( 2 )
+UIPath = NodePath("../../../..")
+
+[node name="Back" type="Button" parent="Dialogue/Center/GameInterface"]
+margin_right = 142.0
+margin_bottom = 51.0
+theme = ExtResource( 6 )
+group = ExtResource( 1 )
+text = "Back"
+script = ExtResource( 3 )
+
+[node name="Pause" type="Button" parent="Dialogue/Center/GameInterface"]
+margin_left = 242.0
+margin_right = 404.0
+margin_bottom = 51.0
+theme = ExtResource( 6 )
+group = ExtResource( 1 )
+text = "Pause"
+script = ExtResource( 3 )
+
+[node name="Forward" type="Button" parent="Dialogue/Center/GameInterface"]
+margin_left = 504.0
+margin_right = 710.0
+margin_bottom = 51.0
+theme = ExtResource( 6 )
+group = ExtResource( 1 )
+text = "Forward"
+script = ExtResource( 3 )

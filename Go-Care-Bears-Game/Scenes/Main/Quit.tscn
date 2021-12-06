@@ -1,0 +1,87 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Resources/Style/Panel/DialoguePanel.tres" type="StyleBox" id=1]
+[ext_resource path="res://Resources/Style/Misc/HSeperatorInvis.tres" type="StyleBox" id=2]
+[ext_resource path="res://Resources/Style/Theme.tres" type="Theme" id=3]
+[ext_resource path="res://Scenes/Main/Quit.gd" type="Script" id=4]
+
+[node name="QuitBackground" type="ColorRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.176471, 0.207843, 0.2, 0.647059 )
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="."]
+anchor_left = 0.35
+anchor_top = 0.254148
+anchor_right = 0.633958
+anchor_bottom = 0.721778
+margin_left = -0.800049
+margin_top = 0.519958
+margin_right = 0.799927
+margin_bottom = -0.520081
+theme = ExtResource( 3 )
+custom_styles/panel = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="VBox" type="VBoxContainer" parent="Panel"]
+anchor_top = 0.0619048
+anchor_right = 1.00047
+anchor_bottom = 1.0
+margin_top = -0.200012
+margin_right = -0.0581055
+margin_bottom = -3.0
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Label" type="Label" parent="Panel/VBox"]
+margin_right = 546.0
+margin_bottom = 217.0
+text = "Do you wish to save and quit to the desktop"
+align = 1
+autowrap = true
+
+[node name="HSeparator" type="HSeparator" parent="Panel/VBox"]
+margin_top = 252.0
+margin_right = 546.0
+margin_bottom = 252.0
+custom_constants/separation = -6
+custom_styles/separator = ExtResource( 2 )
+
+[node name="CenterQuit" type="CenterContainer" parent="Panel/VBox"]
+margin_top = 287.0
+margin_right = 546.0
+margin_bottom = 338.0
+
+[node name="Quit" type="Button" parent="Panel/VBox/CenterQuit"]
+margin_left = 207.0
+margin_right = 339.0
+margin_bottom = 51.0
+focus_neighbour_top = NodePath("../../CenterCancel/Cancel")
+focus_neighbour_bottom = NodePath("../../CenterCancel/Cancel")
+focus_next = NodePath("../../CenterCancel/Cancel")
+focus_previous = NodePath("../../CenterCancel/Cancel")
+size_flags_horizontal = 0
+text = "Quit"
+
+[node name="CenterCancel" type="CenterContainer" parent="Panel/VBox"]
+margin_top = 373.0
+margin_right = 546.0
+margin_bottom = 424.0
+
+[node name="Cancel" type="Button" parent="Panel/VBox/CenterCancel"]
+margin_left = 183.0
+margin_right = 362.0
+margin_bottom = 51.0
+focus_neighbour_top = NodePath("../../CenterQuit/Quit")
+focus_neighbour_bottom = NodePath("../../CenterQuit/Quit")
+focus_next = NodePath("../../CenterQuit/Quit")
+focus_previous = NodePath("../../CenterQuit/Quit")
+size_flags_horizontal = 0
+text = "Cancel"
